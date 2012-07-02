@@ -11,11 +11,11 @@ function prepare() {
     $('#ads').animate({
       height: 16
     });
-  }, function(){
+  }, function() {
     $('#ads').animate({
       height: 260
-    })
-  })
+    });
+  });
 
   $('#apply').click(apply);
 
@@ -26,6 +26,14 @@ function prepare() {
   $('#cssstr,#teststr,#testcss').keyup(redraw);
 
   $('input').focus(focus).blur(blur);
+
+  $('input[type=checkbox]').hover(function() {
+    $('#mesbox').css({
+      left: $(this).offset().left - 120
+    }).fadeIn(80);
+  }, function() {
+    $('#mesbox').fadeOut(50);
+  });
 
   clear();
 
@@ -62,7 +70,7 @@ function prepare() {
       Url: 'http://fonts.googleapis.com/css?family=',
       Nam: 'Share',
       Str: 'Free, Realtime test space for web font.<br/>'
-        + '&copy;cloudplus.me presented by ' + 'liberty-technology.biz',
+        + '&copy;cloudplus.me <br/>presented by ' + 'liberty-technology.biz',
       Css: JSON.stringify({
         "font-size": "300%",
         "text-shadow": "0px 0px 12px #3c3",
@@ -86,6 +94,7 @@ function prepare() {
   }
 
   function redraw() {
+
     if(CSSNow)
       $('#preview').css('font-family', CSSNow);
     var extcss = null;
@@ -94,9 +103,11 @@ function prepare() {
     } catch(e) {
 
     }
+
     if(extcss)
       $('#preview').css(extcss);
     $('#preview').html($('#teststr').val());
+
   }
 
   function showGWF() {

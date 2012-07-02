@@ -7,12 +7,13 @@ var dn = __dirname, cn = dn.replace(/js$/, 'contents');
 
 module.exports = function(res, location, navigator, callback) {
 
-  var pn = location.pathname, page_data = null, body = null, returns = null, plg = jqyin.plugins;
+  var body = null;
 
   var forkme = jqyin.use('WebFontsGitHubFork');
   var slinks = jqyin.use('social-links');
   var googad = jqyin.use('googleadsense');
   var adwrap = jqyin.use('adwrapper');
+  var wgtwit = jqyin.use('widget-twitter');
 
   prepareLayout();
 
@@ -31,7 +32,7 @@ module.exports = function(res, location, navigator, callback) {
   function readend(err, byteRead, data) {
     try {
 
-      body = $xj.layWrap($xj(data)), forkme.figure(getForkMark);
+      body = $xj.layWrap($xj(data)), forkme.figure(gotForkMark);
 
     } catch(e) {
 
@@ -39,10 +40,22 @@ module.exports = function(res, location, navigator, callback) {
 
     }
   }
-  function getForkMark(err, mark) {
+  function gotForkMark(err, mark) {
     try {
 
-      body.append(mark), slinks.figure(navigator, getSocialLinks);
+      body.append(mark), slinks.figure(navigator, {
+        plugintype: {
+          twitter: {
+            plugintype: {
+              share: {
+                text: 'お気に入りのウェブフォントを試しながら見つけられます。'
+                  + 'WebFontsPreview - http://bit.ly/NndGuU',
+                hashtags: 'WebFontsPreview'
+              }
+            }
+          }
+        }
+      }, gotSocialLinks);
 
     } catch(e) {
 
@@ -50,7 +63,7 @@ module.exports = function(res, location, navigator, callback) {
 
     }
   }
-  function getSocialLinks(err, mark) {
+  function gotSocialLinks(err, mark) {
     try {
 
       if(err)
@@ -58,7 +71,7 @@ module.exports = function(res, location, navigator, callback) {
 
       jqyin.append(body.find('#like_area'), mark);
 
-      googad.figure(getAdLinks);
+      googad.figure(gotAdLinks);
 
     } catch(e) {
 
@@ -67,13 +80,32 @@ module.exports = function(res, location, navigator, callback) {
     }
   }
 
-  function getAdLinks(err, links) {
+  function gotAdLinks(err, links) {
     try {
 
       if(err)
         throw err;
 
-      jqyin.append(body.find('#ads'), adwrap.wrap(links)), callback(null, body);
+      jqyin.append(body.find('#ads'), adwrap.wrap(links));
+
+      body.find('#mesbox').css({
+        opacity: 0.92,
+        border: '1px solid #f88',
+        borderRadius: 8
+      });
+
+      jqyin.append(body.find('#tw-widget'), wgtwit.figure({
+        type: 'search',
+        search: '#WebFont',
+        title: 'Web Font hashed teeets #WebFont',
+        width: 250,
+        height: 200,
+        features: {
+          scrollbar: true
+        }
+      }));
+
+      callback(null, body);
 
     } catch(e) {
 
