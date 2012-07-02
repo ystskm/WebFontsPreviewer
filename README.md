@@ -14,7 +14,8 @@ Usage
 
 Base Architecture
 -
-[foonyah]
+&lt; foonyah &gt;
+
 using node.js (http://nodejs.org) and jQuery (http://jquery.com) power on both 
 browser and server.
 
