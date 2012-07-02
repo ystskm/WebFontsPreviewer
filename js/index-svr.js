@@ -29,6 +29,7 @@ module.exports = function(res, location, navigator, callback) {
 
     }
   }
+
   function readend(err, byteRead, data) {
     try {
 
@@ -40,6 +41,7 @@ module.exports = function(res, location, navigator, callback) {
 
     }
   }
+
   function gotForkMark(err, mark) {
     try {
 
@@ -49,8 +51,8 @@ module.exports = function(res, location, navigator, callback) {
             plugintype: {
               share: {
                 text: 'お気に入りのウェブフォントを試しながら見つけられます。'
-                  + 'WebFontsPreview - http://bit.ly/NndGuU',
-                hashtags: 'WebFontsPreview'
+                  + 'Web Fonts Preview - http://bit.ly/NndGuU',
+                hashtags: 'WebFont'
               }
             }
           }
@@ -63,6 +65,7 @@ module.exports = function(res, location, navigator, callback) {
 
     }
   }
+
   function gotSocialLinks(err, mark) {
     try {
 
@@ -88,7 +91,7 @@ module.exports = function(res, location, navigator, callback) {
 
       jqyin.append(body.find('#ads'), adwrap.wrap(links));
 
-      body.find('#mesbox').css({
+      body.find('#mesbox1,#mesbox2').css({
         opacity: 0.92,
         border: '1px solid #f88',
         borderRadius: 8

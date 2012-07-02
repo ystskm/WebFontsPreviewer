@@ -28,11 +28,22 @@ function prepare() {
   $('input').focus(focus).blur(blur);
 
   $('input[type=checkbox]').hover(function() {
-    $('#mesbox').css({
-      left: $(this).offset().left - 120
+    $('#mesbox1').css({
+      left: 560
     }).fadeIn(80);
   }, function() {
-    $('#mesbox').fadeOut(50);
+    $('#mesbox1').fadeOut(50);
+  });
+
+  
+  $('#cssstr').hover(function() {
+    if(!$('.name').eq(0).hasClass('focus'))
+      $('#mesbox2').css({
+        left: $(this).offset().left - 90
+      }).fadeIn(80);
+  });
+  $('input:not(#cssstr)').hover(function(){
+    $('#mesbox2').fadeOut(50);
   });
 
   clear();
@@ -70,7 +81,7 @@ function prepare() {
       Url: 'http://fonts.googleapis.com/css?family=',
       Nam: 'Share',
       Str: 'Free, Realtime test space for web font.<br/>'
-        + '&copy;cloudplus.me <br/>presented by ' + 'liberty-technology.biz',
+        + '&copy;cloudplus.me',
       Css: JSON.stringify({
         "font-size": "300%",
         "text-shadow": "0px 0px 12px #3c3",
