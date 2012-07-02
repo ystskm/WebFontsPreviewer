@@ -12,8 +12,14 @@ Usage
 1. access to : http://cloudplus.me/WebFonts/
 2. find your favorite font, share, hard copy as image or something.
 
+Base Architecture
+-
+[foonyah]
+using node.js (http://nodejs.org) and jQuery (http://jquery.com) power on both 
+browser and server.
+
 Dependency
-=
+-
 * [jQuery] (http://jquery.com/)
 * xjQuery - Not published yet.
 
