@@ -20,7 +20,7 @@ browser and server.
 Dependency
 -
 * [jQuery] (http://jquery.com/)
-* xjQuery - Not published yet. the library "jqyin" is compound in it.
+* xjQuery - Not published yet. The library "jqyin" is included in it.
 
 if you have an interest to jqyin, xjQuery or foonyah, contact to liberty-technology
  &lt; http://liberty-technology.biz/ &gt; . 
