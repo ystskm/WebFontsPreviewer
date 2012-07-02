@@ -12,7 +12,7 @@ Usage
 
 Dependency
 =
-* [jQuery](http://jquery.com/)
-* [xjQuery](Not published yet.)
+* [jQuery] http://jquery.com/
+* [xjQuery] - Not published yet.
 please inform to liberty-technology &lt; http://liberty-technology.biz/ &gt;
-that you have indicated an interest to xjQuery. 
+that you have an interest to xjQuery. 
