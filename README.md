@@ -9,14 +9,14 @@ Version
 
 Usage
 -
-1.access to : http://cloudplus.me/WebFonts/
-
-2.find your favorite font, share, hard copy as image or something.
+1. access to : http://cloudplus.me/WebFonts/\n
+2. find your favorite font, share, hard copy as image or something.
 
 Dependency
 =
 * [jQuery] (http://jquery.com/)
 * xjQuery - Not published yet.
 
-please inform to liberty-technology &lt; http://liberty-technology.biz/ &gt;
-that you have an interest to xjQuery. 
+if you have an interest to xjQuery, contact to liberty-technology
+ &lt; http://liberty-technology.biz/ &gt; . 
+ 
