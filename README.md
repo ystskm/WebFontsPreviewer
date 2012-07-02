@@ -10,6 +10,7 @@ Version
 Usage
 -
 1.access to : http://cloudplus.me/WebFonts/
+
 2.find your favorite font, share, hard copy as image or something.
 
 Dependency
