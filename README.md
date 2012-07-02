@@ -12,10 +12,8 @@ Usage
 1. access to : http://cloudplus.me/WebFonts/
 2. find your favorite font, share, hard copy as image or something.
 
-Base Architecture
+Base Architecture &lt; foonyah &gt;
 -
-&lt; foonyah &gt;
-
 using node.js (http://nodejs.org) and jQuery (http://jquery.com) power on both 
 browser and server.
 
@@ -24,6 +22,6 @@ Dependency
 * [jQuery] (http://jquery.com/)
 * xjQuery - Not published yet.
 
-if you have an interest to xjQuery, contact to liberty-technology
+if you have an interest to xjQuery or foonyah, contact to liberty-technology
  &lt; http://liberty-technology.biz/ &gt; . 
  
