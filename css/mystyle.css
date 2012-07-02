@@ -1,0 +1,19 @@
+/* mystyle for WebFonts */
+input[type=text] {
+	border: 1px solid #aaa;
+	padding: 3px;
+}
+td {
+	font-family:Share;
+}
+td.focus{
+	color: #08c;
+}
+a {
+	color:#888;
+	font-family:Share;
+	text-decoration:none;
+}
+a:hover {
+	color:#666;
+}
