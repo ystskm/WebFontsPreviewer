@@ -50,7 +50,7 @@ module.exports = function(res, location, navigator, callback) {
           twitter: {
             plugintype: {
               share: {
-                text: 'お気に入りのウェブフォントを試しながら見つけられます。'
+                text: 'Find your favorite web font with realtime preview! '
                   + 'Web Fonts Preview - http://bit.ly/NndGuU',
                 hashtags: 'WebFont'
               }

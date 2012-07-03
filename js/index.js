@@ -35,14 +35,13 @@ function prepare() {
     $('#mesbox1').fadeOut(50);
   });
 
-  
   $('#cssstr').hover(function() {
     if(!$('.name').eq(0).hasClass('focus'))
       $('#mesbox2').css({
         left: $(this).offset().left - 90
       }).fadeIn(80);
   });
-  $('input:not(#cssstr)').hover(function(){
+  $('input:not(#cssstr)').hover(function() {
     $('#mesbox2').fadeOut(50);
   });
 
@@ -81,7 +80,7 @@ function prepare() {
       Url: 'http://fonts.googleapis.com/css?family=',
       Nam: 'Share',
       Str: 'Free, Realtime test space for web font.<br/>'
-        + '&copy;cloudplus.me',
+        + '-- cloudplus.me --',
       Css: JSON.stringify({
         "font-size": "300%",
         "text-shadow": "0px 0px 12px #3c3",
